@@ -1,0 +1,427 @@
+/* Google Fonts */ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+/* Some Variables */
+:root {
+    --blue-color: rgb(51, 161, 204);
+    --dark-blue-color: rgb(8, 84, 114);
+    --grey-color: rgb(86, 102, 106);
+    --light-grey-color: rgb(151, 161, 164);
+    --text-color: #1a2428;
+    --bg-color: #fff;
+}
+img {
+    width: 100%;
+}
+body {
+    color: var(--bg-color);
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 11px rgb(151, 161, 164 / 15%);
+    padding: 20px 100px;
+    transition: 0.5s;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+}
+.profile img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.profile span {
+    font-size: 13px;
+    font-weight: 500;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    column-gap: 0.5rem;
+}
+.logo.bx {
+    font-size: 24px;
+    color: var(--grey-color);
+}
+.navbar {
+    display: flex;
+    column-gap: 0.5rem;
+}
+.navbar a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+}
+.navbar a:hover,
+.navbar .home-active {
+    background: var(--dark-blue-color);
+    border-radius: 5rem;
+    color: var(--bg-color);
+    transition: background 0.5s;
+}
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background: url(img.17.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.container img {
+    width: 400px;
+    position: absolute;
+    bottom: -500px;
+    right: 200px;
+}
+.home-text {
+    padding: 0 150px;
+}
+.home-text span {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--light-grey-color);
+    margin-bottom: 70px;
+}
+.home-text h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 170px;
+    margin-bottom: 1rem;
+}
+.btn {
+    padding: 0.6rem 1rem;
+    background: var(--dark-blue-color);
+    color: var(--bg-color);
+    font-weight: 400;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+    max-width: 160px;
+}
+.btn .bx {
+    padding: 4px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+    font-size: 20px;
+    margin: auto;
+}
+.btn:hover {
+    background: var(--light-grey-color);
+    transition: 0.2s ease;
+}
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.heading span {
+    color: var(--blue-color);
+}
+.categories {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.categories-container .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0.5rem;
+}
+.categories-container .box img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+}
+.categories-container .box h2 {
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+.categories-container .box span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.categories-container .box .bx {
+    padding: 10px;
+    background: var(--blue-color);
+    color: var(--bg-color);
+    border-radius: 5rem;
+    margin-top: 2rem;
+    position: absolute;
+    bottom: -8%;
+    display: none;
+}
+.categories-container .box .bx:hover {
+    background: var(--light-grey-color);
+    transition: 0.2s all linear;
+}
+.categories-container .box:hover .bx {
+    display: block;
+    transition: 0.2s all linear;
+}
+.box1 {
+    background: #b7bfc7;
+}
+.box2 {
+    background: #868fad;
+}
+.box3 {
+    background: #b8a5b4;
+}
+.box4 {
+    background: #afa69d;
+}
+.box5 {
+    background: #9fb49a;
+}
+/* General site styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+}
+
+/* Page layout for experiments */
+.experiment-container, .quiz-container {
+    display: flex; /* Enables horizontal alignment of content and image */
+    flex-wrap: wrap; /* Ensures the layout adjusts on smaller screens */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: white;
+    background: rgb(163, 160, 160);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Text content section */
+.experiment-content {
+    flex: 1 1 65%; /* Takes up 60% of the container width */
+    padding: 30px;
+}
+
+.experiment-title {
+    font-size: 2.5rem;
+    color: #0f6066;
+    margin-bottom: 20px;
+}
+
+.experiment-content p,
+.experiment-content ul,
+.experiment-content ol {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.experiment-content h3 {
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Image section */
+.experiment-image {
+    flex: 1 1 40%; /* Takes up 40% of the container width */
+    display: flex;
+    align-items: center; /* Centers the image vertically */
+    justify-content: center; /* Centers the image horizontally */
+    background: #a36565; /* Light background for the image area */
+    padding: 10px;
+}
+
+.experiment-image img {
+    max-width: 80%; /* Ensures the image scales within its container */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styles */
+.btn-custom {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #000000;
+    background: #b66861;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-custom:hover {
+    background: #987370;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.footer {
+    max-width: 1024px;
+    margin: auto;
+}
+.why-science {
+    background: #f8f8f8;
+}
+
+.why-science h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Popular Experiments */
+.popular-experiments {
+    background: #fff;
+}
+.experiment-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.experiment-item {
+    background: #8ea1af;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+.error {
+    color: red;
+    font-size: 12px;
+}
+.message {
+    color: blue;
+    font-size: 12px;
+}
+/* General styles for quiz container */
+#quiz-container {
+    color: #333; /* Default text color */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for question text */
+#question-text {
+    color: #3079c7; /* Blue color */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Style for options */
+#options-container label {
+    display: block;
+    color: #444; /* Dark gray */
+    font-size: 18px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+/* Highlight selected option */
+#options-container input[type="radio"]:checked + label {
+    color: #08090f; /* Red for selected option */
+    font-weight: bold;
+}
+
+/* Style for buttons */
+button {
+    background-color: #27903f; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #218838; /* Darker green */
+}
+
+/* Hide submit button initially */
+#submit-btn {
+    display: none;
+}
+
+/* Style for score text */
+#score {
+    font-weight: bold;
+    color: #ff9800; /* Orange */
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+
